@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Inspection</title>
+</head>
+<body>
+    <h1>Data Inspection</h1>
+    <p>{{ result }}</p>
+    <p>{{ table|safe }}</p>
+    <h2>Heatmap:</h2>
+    <img src="data:image/png;base64,{{ plot_url }}" alt="Heatmap">
+</body>
+</html>

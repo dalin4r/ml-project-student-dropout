@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classifier Selection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">  
+
+<style>
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-image: url('/static/images/ml.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-image 0.5s ease;
+
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Roboto', sans-serif;
+      color: #FFFFFF
+    }
+
+    .custom-text {
+      font-family: 'Roboto', sans-serif;
+    }
+
+
+     label {
+            color: #FFFFFF;
+        }
+
+
+       h2:nth-of-type(1) {
+
+          padding: 10px; /* Add padding for better visual appearance */
+        }
+        h2:nth-of-type(2) {
+
+          padding: 10px; /* Add padding for better visual appearance */
+        }
+        h2:nth-of-type(3) {
+
+          padding: 10px; /* Add padding for better visual appearance */
+        }
+        h2:nth-of-type(4) {
+
+          padding: 10px; /* Add padding for better visual appearance */
+        }
+        h2:nth-of-type(5) {
+
+          padding: 10px; /* Add padding for better visual appearance */
+        }
+
+
+         img {
+            background-color: #a0d2eb; /
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+        }
+  </style>
+</head>
+<body>
+   <center>
+    <h1>Predicting Academic Success</h1>
+    <form method="POST">
+        <label for="classifier">Select a classifier:</label>
+        <select id="classifier" name="classifier">
+            {% for classifier in classifiers %}
+            <option value="{{ classifier }}">{{ classifier }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Decision Tree</h2>
+    <BR><img src=/static/images/decisiontree.png alt="decision" style="width: 500px; height: auto;" ><BR>
+
+    <h2>Neural Network</h2>
+    <BR><img src=/static/images/nnetwork.png alt="nnetwork" style="width: 500px; height: auto;"><BR>
+
+    <h2>Random Forest</h2>    
+    <BR><img src=/static/images/randomforest.png alt="rforest" style="width: 500px; height: auto;"><BR> 
+
+    <h2>Naive Bayes</h2> 
+    <BR><img src=/static/images/bayes.png alt="bayes" style="width: 500px; height: auto;"><BR>
+
+    <h2>Support Vector Machine</h2>         
+    <BR><img src=/static/images/svm.png alt="svm" style="width: 500px; height: auto;"><BR>
+
+     <h2>Inspect Data</h2>
+
+    </center>
+</body>
+</html>
